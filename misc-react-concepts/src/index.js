@@ -4,6 +4,22 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+
+function time(){
+  const element = (
+    <div>
+      <h1>clock</h1>
+      <h2>now the time is {new Date().toLocaleTimeString()}</h2>
+    </div>
+  );
+  ReactDOM.render(element,document.getElementById('root'))
+}
+
+setInterval(time,1000)
+
+
+
+
 /* /different ways of creating JSX element
 const htmlElement = (
   <h1 className="greeting">Hello</h1>
