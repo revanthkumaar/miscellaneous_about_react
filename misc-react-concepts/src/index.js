@@ -4,7 +4,38 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+//simplest way of writing a component - "function component"
 
+function Welcome(props){
+  return <h1>hello, {props.name} </h1>
+}
+
+//class component using ES6 class methods
+
+class Welcome extends React.Component {
+  render() {
+    return <h1>Hello, {this.props.name}</h1>;
+  }
+}
+
+// <Welcome/>
+
+function Welcome(props){
+  return <h1>hello, this is {props.name} and i am {props.age} old</h1>
+}//functionality
+
+const nameOfStudent = "Sara"
+const element = <Welcome name="{nameOfStudent}" age="26" />; //UI element of component
+
+ReactDOM.render(
+  element,
+  document.getElementById('root')
+);
+
+
+
+
+/*
 function time(){
   const element = (
     <div>
@@ -17,7 +48,7 @@ function time(){
 
 setInterval(time,1000)
 
-
+/*
 
 
 /* /different ways of creating JSX element
